@@ -48,6 +48,7 @@ Deploy
 ```sh
 docker run -d --restart always \
 --name mysql --hostname mysql --network network-aws \
+-v $(pwd)/mysql_data:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD="root123" \
 -e MYSQL_DATABASE="default" \
 -e MYSQL_USER="dba" \
